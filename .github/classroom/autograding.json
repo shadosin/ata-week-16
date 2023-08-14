@@ -1,0 +1,114 @@
+{
+  "tests": [
+    {
+      "name": "Test InMemoryCaching Orders",
+      "setup": "",
+      "run": "./gradlew inmemorycaching-orders-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": 1
+    },
+    {
+      "name": "Test InMemoryCaching KenzieGaming Unit",
+      "setup": "",
+      "run": "./gradlew inmemorycaching-kenziegaming-groupmembershipcaching-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test InMemoryCaching KenzieGaming Integration Phase 2",
+      "setup": "",
+      "run": "./gradlew inmemorycaching-kenziegaming-test-phase2 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test LambdaExpressions Price Manager",
+      "setup": "",
+      "run": "./gradlew lambdaexpressions-pricemanager-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test LambdaExpressions CustomerManager",
+      "setup": "",
+      "run": "./gradlew lambdaexpressions-customermanager-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test LambdaExpressions NumberGenerator",
+      "setup": "",
+      "run": "./gradlew lambdaexpressions-numbergenerator-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 0",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase0 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 1",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase1 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 2",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase2 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 3",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase3 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "LambdaExpressions ShippingHelper",
+      "setup": "",
+      "run": "./gradlew lambdaexpressions-shippinghelper-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
