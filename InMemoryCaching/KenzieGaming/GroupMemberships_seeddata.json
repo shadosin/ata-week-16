@@ -1,0 +1,94 @@
+{
+    "Caching-GroupMemberships": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId":{"S":"c7827a77-0b6b-4de4-90d5-8b4a47b52559"},
+                    "userId": {"S": "0"},
+                    "groupType": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"2eb75f30-c085-475b-82ff-f9745af1e33b"},
+                    "userId": {"S": "1"},
+                    "groupType": {"S": "GAMING_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"305c058a-ad5d-41f1-8fca-3eeed9b5c5b2"},
+                    "userId": {"S": "2"},
+                    "groupType": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"27832c43-19b6-4990-aed4-b9858f9a498b"},
+                    "userId": {"S": "3"},
+                    "groupType": {"S": "GAMING_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"87f97b71-22f9-48d7-bff4-16afa53ad662"},
+                    "userId": {"S": "4"},
+                    "groupType": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId":{"S":"c7827a77-0b6b-4de4-90d5-8b4a47b52559"},
+                    "userId": {"S": "5"},
+                    "groupType": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"2eb75f30-c085-475b-82ff-f9745af1e33b"},
+                    "userId": {"S": "6"},
+                    "groupType": {"S": "GAMING_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"305c058a-ad5d-41f1-8fca-3eeed9b5c5b2"},
+                    "userId": {"S": "7"},
+                    "groupType": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"27832c43-19b6-4990-aed4-b9858f9a498b"},
+                    "userId": {"S": "8"},
+                    "groupType": {"S": "GAMING_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "groupId": {"S":"87f97b71-22f9-48d7-bff4-16afa53ad662"},
+                    "userId": {"S": "9"},
+                    "groupType": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        }
+    ]
+}

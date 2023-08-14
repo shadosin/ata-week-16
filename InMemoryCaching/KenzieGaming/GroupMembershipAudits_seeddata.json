@@ -1,0 +1,94 @@
+{
+    "Caching-GroupMembershipAudits": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId":{"S":"0_c7827a77-0b6b-4de4-90d5-8b4a47b52559"},
+                    "editedAt": {"S": "2022-04-30"},
+                    "auditAction": {"S": "REMOVE"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"1_2eb75f30-c085-475b-82ff-f9745af1e33b"},
+                    "editedAt": {"S": "2022-05-15"},
+                    "auditAction": {"S": "ADD"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"2_305c058a-ad5d-41f1-8fca-3eeed9b5c5b2"},
+                    "editedAt": {"S": "2022-04-30"},
+                    "auditAction": {"S": "ADD"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"3_27832c43-19b6-4990-aed4-b9858f9a498b"},
+                    "editedAt": {"S": "2022-05-15"},
+                    "auditAction": {"S": "REMOVE"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"4_87f97b71-22f9-48d7-bff4-16afa53ad662"},
+                    "editedAt": {"S": "2022-05-15"},
+                    "auditAction": {"S": "REMOVE"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId":{"S":"5_c7827a77-0b6b-4de4-90d5-8b4a47b52559"},
+                    "editedAt": {"S": "2022-04-30"},
+                    "auditAction": {"S": "ADD"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"6_2eb75f30-c085-475b-82ff-f9745af1e33b"},
+                    "editedAt": {"S": "2022-05-15"},
+                    "auditAction": {"S": "REMOVE"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"7_305c058a-ad5d-41f1-8fca-3eeed9b5c5b2"},
+                    "editedAt": {"S": "2022-04-30"},
+                    "auditAction": {"S": "REMOVE"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"8_27832c43-19b6-4990-aed4-b9858f9a498b"},
+                    "editedAt": {"S": "2022-04-30"},
+                    "auditAction": {"S": "REMOVE"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId_groupId": {"S":"9_87f97b71-22f9-48d7-bff4-16afa53ad662"},
+                    "editedAt": {"S": "2022-05-15"},
+                    "auditAction": {"S": "ADD"}
+                }
+            }
+        }
+    ]
+}

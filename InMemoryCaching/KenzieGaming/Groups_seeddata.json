@@ -1,0 +1,49 @@
+{
+    "Caching-Groups": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"c7827a77-0b6b-4de4-90d5-8b4a47b52559"},
+                    "name": {"S":"The Coolest Discussion Group"},
+                    "type": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"2eb75f30-c085-475b-82ff-f9745af1e33b"},
+                    "name": {"S":"Kenzie Amogus Group"},
+                    "type": {"S": "GAMING_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"305c058a-ad5d-41f1-8fca-3eeed9b5c5b2"},
+                    "name": {"S":"Advanced Java Group"},
+                    "type": {"S": "DISCUSSION_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"27832c43-19b6-4990-aed4-b9858f9a498b"},
+                    "name": {"S":"PUBG Players"},
+                    "type": {"S": "GAMING_GROUP"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"87f97b71-22f9-48d7-bff4-16afa53ad662"},
+                    "name": {"S":"KenzieStillPlays GTA V Group"},
+                    "type": {"S": "GAMING_GROUP"}
+                }
+            }
+        }
+    ]
+}

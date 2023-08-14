@@ -1,0 +1,89 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CFT for DynamoDB table setup for ATA Week 16 Kenzie Gaming activity
+Resources:
+  Groups:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "Caching-Groups"
+      AttributeDefinitions:
+        - AttributeName: "id"
+          AttributeType: "S"
+      BillingMode: "PAY_PER_REQUEST"
+      ContributorInsightsSpecification:
+        Enabled: false
+      KeySchema:
+        - AttributeName: "id"
+          KeyType: HASH
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      TableClass: "STANDARD"
+      Tags:
+        - Key: Week
+          Value: 16
+        - Key: CourseName
+          Value: ata
+        - Key: InstructorMade
+          Value: true
+  GroupMemberships:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "Caching-GroupMemberships"
+      AttributeDefinitions:
+        - AttributeName: "userId"
+          AttributeType: "S"
+        - AttributeName: "groupId"
+          AttributeType: "S"
+      BillingMode: "PAY_PER_REQUEST"
+      ContributorInsightsSpecification:
+        Enabled: false
+      KeySchema:
+        - AttributeName: "userId"
+          KeyType: HASH
+        - AttributeName: "groupId"
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: "groupId-userId"
+          KeySchema:
+            - AttributeName: "userId"
+              KeyType: HASH
+            - AttributeName: "groupId"
+              KeyType: RANGE
+          Projection:
+            ProjectionType: KEYS_ONLY
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      TableClass: "STANDARD"
+      Tags:
+        - Key: Week
+          Value: 16
+        - Key: CourseName
+          Value: ata
+        - Key: InstructorMade
+          Value: true
+  GroupMembershipAudits:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "Caching-GroupMembershipAudits"
+      AttributeDefinitions:
+        - AttributeName: "userId_groupId"
+          AttributeType: "S"
+        - AttributeName: "editedAt"
+          AttributeType: "S"
+      BillingMode: "PAY_PER_REQUEST"
+      ContributorInsightsSpecification:
+        Enabled: false
+      KeySchema:
+        - AttributeName: "userId_groupId"
+          KeyType: HASH
+        - AttributeName: "editedAt"
+          KeyType: RANGE
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      TableClass: "STANDARD"
+      Tags:
+        - Key: Week
+          Value: 16
+        - Key: CourseName
+          Value: ata
+        - Key: InstructorMade
+          Value: true

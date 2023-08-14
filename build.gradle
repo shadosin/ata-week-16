@@ -1,0 +1,22 @@
+plugins {
+    id 'com.github.spotbugs' version '4.6.2'
+    id 'ata-curriculum.snippets-conventions'
+}
+
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/KenzieAcademy-SoftwareEngineering/kenzie-java-test-infrastructure")
+        credentials {
+            username = "kenzie-gradle"
+            password = "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"
+        }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('com.kenzie:testinfrastructure:1.0-SNAPSHOT')
+    testImplementation(platform('org.junit:junit-bom:5.8.0'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+}
