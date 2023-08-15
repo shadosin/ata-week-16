@@ -1,7 +1,9 @@
 
 package com.kenzie.inmemorycaching.kenziegaming.activity;
 
+import com.kenzie.inmemorycaching.kenziegaming.dao.GroupMembershipCachingDao;
 import com.kenzie.inmemorycaching.kenziegaming.dao.GroupMembershipDao;
+import com.kenzie.inmemorycaching.kenziegaming.dao.models.GroupMembershipCacheKey;
 
 import javax.inject.Inject;
 
@@ -10,15 +12,15 @@ import javax.inject.Inject;
  */
 public class CheckUserInGroupActivity {
 
-    private final GroupMembershipDao groupMembershipDao;
+    private final GroupMembershipCachingDao groupMembershipCachDao;
 
     /**
      * Constructs an Activity with the given DAOs.
      * @param groupMembershipDao The GroupMembershipDao to use for checking the user's membership
      */
     @Inject
-    public CheckUserInGroupActivity(final GroupMembershipDao groupMembershipDao) {
-        this.groupMembershipDao = groupMembershipDao;
+    public CheckUserInGroupActivity(final GroupMembershipCachingDao groupMembershipDao) {
+        this.groupMembershipCachDao = groupMembershipDao;
     }
 
     /**
@@ -28,6 +30,7 @@ public class CheckUserInGroupActivity {
      * @return true if the userId has a membership in the group, false otherwise
      */
     public boolean handleRequest(final String userId, final String groupId) {
-        return groupMembershipDao.isUserInGroup(userId, groupId);
+        GroupMembershipCacheKey key = new GroupMembershipCacheKey(userId, groupId);
+        return groupMembershipCachDao.isUserInGroup(key);
     }
 }

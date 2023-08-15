@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
@@ -31,12 +32,22 @@ public class GroupMembershipCachingDaoTest {
     @Test
     public void test1() {
         // Implement your test here
-        // GIVEN
+        String userId = "user123";
+        String groupId = "group456";
+
+        GroupMembershipCacheKey cacheKey = new GroupMembershipCacheKey(userId, groupId);
+
+
+        // Mock the behavior of the delegateDao
+        when(membershipDao.isUserInGroup(userId, groupId)).thenReturn(true);
 
         // WHEN
+        boolean result1 = cachingMembershipDao.isUserInGroup(cacheKey);
+        boolean result2 = cachingMembershipDao.isUserInGroup(cacheKey);
 
-        // THEN
-        assertTrue(false);
+
+        // Verify that the delegateDao was called only once
+        verify(membershipDao, times(1)).isUserInGroup(cacheKey);
     }
 
     // Rename this method
@@ -44,10 +55,20 @@ public class GroupMembershipCachingDaoTest {
     public void test2() {
         // Implement your test here
         // GIVEN
+        String userId = "user789";
+        String groupId = "group101";
+        GroupMembershipCacheKey cacheKey = new GroupMembershipCacheKey(userId, groupId);
 
+        // Mock the behavior of the delegateDao
+        when(membershipDao.isUserInGroup(cacheKey)).thenReturn(false);
+        boolean result = membershipDao.isUserInGroup(cacheKey);
         // WHEN
 
-        // THEN
-        assertTrue(false);
+        // Verify that the delegateDao was called only once
+        verify(membershipDao, times(1)).isUserInGroup(cacheKey);
+
     }
 }
+
+
+
